@@ -1,0 +1,11 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tcmotd
+  labels:
+    app: motd
+spec:
+  containers:
+  - name: motd
+    image: caztan/motd:latest
