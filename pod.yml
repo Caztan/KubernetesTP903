@@ -4,8 +4,8 @@ kind: Pod
 metadata:
   name: tcmotd
   labels:
-    app: motd
+    app: tcmotd
 spec:
   containers:
-  - name: motd
+  - name: tcmotd
     image: caztan/motd:latest
