@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tcmotd-deployment
+  labels:
+    app: tcmotd
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tcmotd
+  template:
+    metadata:
+      labels:
+        app: tcmotd
+    spec:
+      containers:
+      - name: tcmotd
+        image: caztan/motd:latest
+        ports:
+        - containerPort: 80
